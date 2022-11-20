@@ -1,3 +1,3 @@
-export default function Home() {
-  return <></>
+export default function Index() {
+  return <></>;
 }

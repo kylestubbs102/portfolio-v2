@@ -1,0 +1,99 @@
+.container {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: 1fr 200px 1fr;
+}
+
+.diagonalBox {
+  background-image: linear-gradient(to bottom left, white 50%, black 50%);
+}
+
+.whiteRectangle {
+  background-color: white;
+}
+
+.blackRectangle {
+  background-color: black;
+}
+
+.infoContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.introText {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 45px;
+  letter-spacing: 6px;
+  color: red;
+  margin-bottom: 4px;
+}
+
+.nameText {
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 52.5px;
+  margin-bottom: 7px;
+}
+
+.occupationText {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22.5px;
+  margin-bottom: 20px;
+}
+
+.descriptionText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 50px;
+  max-width: 500px;
+}
+
+.hireBtn {
+  font-size: 18px;
+  font-weight: 700;
+  color: red;
+  background-color: black;
+  width: 115px;
+  height: 41px;
+  border-radius: 10px;
+}
+
+.hireBtn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.linkOuterContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+.linkInnerContainer {
+  display: flex;
+  border: 2px solid red;
+  margin-left: 100px;
+  flex-direction: column;
+  border-radius: 30px;
+  padding: 15px 8px;
+  gap: 20px;
+}
+
+.icon {
+  color: white;
+  height: 22px;
+  width: 22px;
+}
+
+.icon:hover {
+  color: red;
+}

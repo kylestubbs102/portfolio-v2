@@ -1,7 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/pages/Home.module.css";
 
 export default function Home() {
   return (

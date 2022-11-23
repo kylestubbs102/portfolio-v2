@@ -41,17 +41,6 @@
   margin-bottom: 4px;
 }
 
-.dividerContainer {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 37px;
-}
-
-.dividerItem {
-  background-color: red;
-  height: 3px;
-}
-
 .nameText {
   font-size: 35px;
   font-weight: 700;

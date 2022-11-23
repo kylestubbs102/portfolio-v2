@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.headerContainer {
+  margin-top: 111px;
+  margin-bottom: 53px;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+  color: white;
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px 87px 75px;
+  gap: 31px;
+  max-width: 1200px; /* Make sure max amount of columns is 3 */
+}

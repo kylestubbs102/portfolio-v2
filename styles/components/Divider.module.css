@@ -1,0 +1,9 @@
+.dividerContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.dividerItem {
+  background-color: red;
+  height: 3px;
+}

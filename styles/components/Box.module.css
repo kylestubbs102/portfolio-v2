@@ -1,0 +1,37 @@
+.projectBox {
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 38px 32px;
+}
+
+.iconBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 71px;
+  height: 63px;
+  margin-bottom: 36px;
+  border-radius: 20px 20px 0px 20px;
+  background-color: black;
+}
+
+.icon {
+  width: 38px;
+  height: 38px;
+}
+
+.projectTitle {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 37.5px;
+  margin-bottom: 15px;
+}
+
+.projectDescription {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}

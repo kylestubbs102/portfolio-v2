@@ -1,12 +1,21 @@
-import { BoxData } from "../pages/projects/ProjectData";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/components/Box.module.css";
 
-export default function Box({ title, description }: BoxData) {
+export interface BoxData {
+  title: string;
+  description: string;
+  icon?: IconProp;
+}
+
+export default function Box({ title, description, icon }: BoxData) {
   return (
     <div className={styles.projectBox}>
-      <div className={styles.iconBox}>
-        <div className={styles.icon} />
-      </div>
+      {icon != null && (
+        <div className={styles.iconBox}>
+          <FontAwesomeIcon icon={icon} className={styles.icon} />
+        </div>
+      )}
       <p className={styles.projectTitle}>{title}</p>
       <p className={styles.projectDescription}>{description}</p>
     </div>

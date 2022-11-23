@@ -1,34 +1,42 @@
+import { faAndroid } from "@fortawesome/free-brands-svg-icons";
+import {
+  faEarth,
+  faLaptopCode,
+  faTools,
+} from "@fortawesome/free-solid-svg-icons";
 import { BoxData } from "../../components/Box";
 
-export const PROJECTS: Array<BoxData> = [
+export const SKILLS: Array<BoxData> = [
   {
-    title: "UX Designer",
+    title: "Languages",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+    icon: faEarth,
   },
   {
-    title: "Website Design",
+    title: "Android",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+    icon: faAndroid,
   },
   {
-    title: "SEO",
+    title: "Web",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+    icon: faLaptopCode,
   },
   {
-    title: "Digital Marketing",
+    title: "Tools",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
-  },
-  {
-    title: "Content Writing",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
-  },
-  {
-    title: "Graphic Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+    icon: faTools,
   },
 ];
+
+// If you see this it means that I'm interested in and currently learning iOS dev :)
+//
+//   {
+//     title: "iOS",
+//     description: "",
+//     icon: faApple,
+//   },

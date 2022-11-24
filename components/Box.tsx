@@ -5,12 +5,28 @@ import styles from "../styles/components/Box.module.css";
 export interface BoxData {
   title: string;
   description: string;
+  style?: React.CSSProperties;
   icon?: IconProp;
 }
 
-export default function Box({ title, description, icon }: BoxData) {
+interface BoxProps extends BoxData {
+  width: number;
+  height: number;
+}
+
+export default function Box({
+  title,
+  description,
+  width,
+  height,
+  style,
+  icon,
+}: BoxProps) {
   return (
-    <div className={styles.projectBox}>
+    <div
+      className={styles.box}
+      style={{ ...style, width: width, height: height }}
+    >
       {icon != null && (
         <div className={styles.iconBox}>
           <FontAwesomeIcon icon={icon} className={styles.icon} />

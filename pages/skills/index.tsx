@@ -10,9 +10,9 @@ export default function Skills() {
         <p className={styles.title}>Skills</p>
         <Divider />
       </div>
-      <div className={styles.projectsContainer}>
-        {SKILLS.map((project, index) => (
-          <Box key={index} {...project} />
+      <div className={styles.skillsContainer}>
+        {SKILLS.map((skill, index) => (
+          <Box key={index} {...skill} width={350} height={350} />
         ))}
       </div>
     </div>

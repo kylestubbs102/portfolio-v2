@@ -12,7 +12,7 @@ export default function Projects() {
       </div>
       <div className={styles.projectsContainer}>
         {PROJECTS.map((project, index) => (
-          <Box key={index} {...project} />
+          <Box key={index} {...project} width={350} height={350} />
         ))}
       </div>
     </div>

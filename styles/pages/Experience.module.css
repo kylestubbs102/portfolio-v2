@@ -1,0 +1,66 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.headerContainer {
+  margin-top: 111px;
+  margin-bottom: 53px;
+  justify-content: center;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 45px;
+  color: white;
+}
+
+.infoContainer {
+  display: grid;
+  place-items: center;
+  grid-template-areas: "timeline";
+  grid-template-columns: auto;
+  margin: 0px 87px 75px;
+}
+
+.experienceContainer {
+  display: grid;
+  align-self: start;
+  min-width: auto;
+  grid-area: timeline;
+  grid-template-columns: auto 150px auto;
+  row-gap: 120px;
+}
+
+.timelineRope {
+  display: grid;
+  align-self: start;
+  background-color: red;
+  width: 10px;
+  height: 100%;
+  grid-area: timeline;
+}
+
+.circle {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: inset 0px 0px 0px 5px red; /* inner border */
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.circle p {
+  display: flex;
+  align-items: center;
+  font-weight: 700px;
+  font-size: 40px;
+  line-height: 75px;
+}

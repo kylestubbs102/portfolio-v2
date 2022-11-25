@@ -1,0 +1,131 @@
+.navbar {
+  background-color: transparent;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 20;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  max-width: 1600px;
+}
+
+.navLogo {
+  color: red;
+  align-items: center;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2.3rem;
+  font-family: "Fira Sans", sans-serif;
+  /* flex-grow: 1; */
+}
+
+.navMenu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.navLinks {
+  color: red;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  font-family: "Lato", sans-serif;
+}
+
+.icon {
+  margin-left: 1rem;
+}
+
+.navItem {
+  line-height: 40px;
+  margin-right: 1rem;
+  text-decoration: none;
+}
+
+.navItem:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.navItem:hover:after {
+  width: 100%;
+  background: red;
+}
+
+.navItem .active {
+  color: red;
+  border: 1px solid red;
+}
+
+.navIcon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 1px solid #fff;
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    transition: all 0.5s ease;
+    opacity: 1;
+  }
+
+  .navMenu.active {
+    background: black;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .navItem {
+    left: 0px;
+    right: 0px;
+    margin: 0;
+  }
+
+  .navItem .active {
+    color: red;
+    border: none;
+  }
+
+  .navLinks {
+    padding: 1.5rem 0;
+    width: 100%;
+    display: table;
+  }
+
+  .navIcon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: red;
+  }
+}

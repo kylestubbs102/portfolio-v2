@@ -4,7 +4,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 22.5px;
   width: 100%;
   position: absolute;
   top: 0;
@@ -26,8 +28,8 @@
   margin-left: 20px;
   cursor: pointer;
   text-decoration: none;
-  font-size: 2.3rem;
-  font-family: "Fira Sans", sans-serif;
+  font-size: 37px;
+  font-family: Poppins;
   /* flex-grow: 1; */
 }
 
@@ -35,25 +37,25 @@
   display: flex;
   list-style: none;
   text-align: center;
-  margin-right: 2rem;
+  margin-right: 32px;
+  gap: 30px;
 }
 
 .navLinks {
   color: red;
   text-decoration: none;
-  padding: 0.5rem 1rem;
   height: 100%;
   border-bottom: 3px solid transparent;
-  font-family: "Lato", sans-serif;
+  font-family: Poppins;
 }
 
 .icon {
-  margin-left: 1rem;
+  margin-left: 16px;
 }
 
 .navItem {
   line-height: 40px;
-  margin-right: 1rem;
+  margin-right: 16px;
   text-decoration: none;
 }
 
@@ -71,9 +73,9 @@
   background: red;
 }
 
-.navItem .active {
-  color: red;
-  border: 1px solid red;
+.navItem:has(.active):after {
+  width: 100%;
+  background: red;
 }
 
 .navIcon {
@@ -84,13 +86,17 @@
   .navMenu {
     display: flex;
     flex-direction: column;
+    gap: 0;
     width: 100%;
     border-top: 1px solid #fff;
     position: absolute;
-    top: 80px;
+    top: 0px;
     left: -110%;
     transition: all 0.5s ease;
     opacity: 1;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 22.5px;
   }
 
   .navMenu.active {
@@ -108,12 +114,25 @@
   }
 
   .navItem .active {
-    color: red;
-    border: none;
+    color: white;
+  }
+
+  .navItem:hover:after {
+    width: 100%;
+  }
+
+  .navItem:has(.active):after {
+    width: 0%;
+    background: transparent;
+  }
+
+  .navItem:has(.active):hover:after {
+    width: 100%;
+    background: red;
   }
 
   .navLinks {
-    padding: 1.5rem 0;
+    padding: 24px 0;
     width: 100%;
     display: table;
   }
@@ -124,8 +143,9 @@
     top: 0;
     right: 0;
     transform: translate(-100%, 60%);
-    font-size: 1.8rem;
+    font-size: 28px;
     cursor: pointer;
     color: red;
+    z-index: 1;
   }
 }

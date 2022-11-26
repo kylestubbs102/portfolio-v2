@@ -5,10 +5,6 @@ import { useRef } from "react";
 import Divider from "../../components/Divider";
 import styles from "../../styles/pages/Contact.module.css";
 
-interface FormControlEvent extends React.FormEvent<HTMLInputElement> {
-  currentTarget: HTMLInputElement;
-}
-
 export default function Contact() {
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
@@ -43,35 +39,35 @@ export default function Contact() {
               You can also reach me at the following links.
             </p>
             <div className={styles.linkOuterContainer}>
-          <div className={styles.linkInnerContainer}>
-            <a
-              href="https://www.linkedin.com/in/kylestubbs102/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
-            </a>
-            <a
-              href="https://github.com/kylestubbs102/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-            </a>
-            <a
-              href="mailto:kylestubbs102@gmail.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
-            </a>
-          </div>
-        </div>
+              <div className={styles.linkInnerContainer}>
+                <a
+                  href="https://www.linkedin.com/in/kylestubbs102/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faLinkedin} className={styles.icon} />
+                </a>
+                <a
+                  href="https://github.com/kylestubbs102/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+                </a>
+                <a
+                  href="mailto:kylestubbs102@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon icon={faEnvelope} className={styles.icon} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
         <form
           className={styles.inputContainer}
-          onSubmit={e => handleSubmit(e)}
+          onSubmit={(e) => handleSubmit(e)}
         >
           <input
             className={`${styles.baseInput} ${styles.normalInput}`}

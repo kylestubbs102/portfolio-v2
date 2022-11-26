@@ -23,84 +23,72 @@ export default function Navbar() {
             click ? `${styles.navMenu} ${styles.active}` : styles.navMenu
           }
         >
-          <li className={styles.navItem}>
-            <Link
-              href="/home"
-              className={
-                router.pathname == "/home"
-                  ? `${styles.navLinks} ${styles.active}`
-                  : styles.navLinks
-              }
-              onClick={handleClick}
-            >
-              Home
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link
-              href="/about"
-              className={
-                router.pathname == "/about"
-                  ? `${styles.navLinks} ${styles.active}`
-                  : styles.navLinks
-              }
-              onClick={handleClick}
-            >
-              About
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link
-              href="/projects"
-              className={
-                router.pathname == "/projects"
-                  ? `${styles.navLinks} ${styles.active}`
-                  : styles.navLinks
-              }
-              onClick={handleClick}
-            >
-              Projects
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link
-              href="/skills"
-              className={
-                router.pathname == "/skills"
-                  ? `${styles.navLinks} ${styles.active}`
-                  : styles.navLinks
-              }
-              onClick={handleClick}
-            >
-              Skills
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link
-              href="/experience"
-              className={
-                router.pathname == "/experience"
-                  ? `${styles.navLinks} ${styles.active}`
-                  : styles.navLinks
-              }
-              onClick={handleClick}
-            >
-              Experience
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link
-              href="/contact"
-              className={
-                router.pathname == "/contact"
-                  ? `${styles.navLinks} ${styles.active}`
-                  : styles.navLinks
-              }
-              onClick={handleClick}
-            >
-              Contact
-            </Link>
-          </li>
+          <Link
+            href="/home"
+            className={
+              router.pathname == "/home"
+                ? `${styles.navLinks} ${styles.active}`
+                : styles.navLinks
+            }
+            onClick={handleClick}
+          >
+            <li className={styles.navItem}>Home</li>
+          </Link>
+          <Link
+            href="/about"
+            className={
+              router.pathname == "/about"
+                ? `${styles.navLinks} ${styles.active}`
+                : styles.navLinks
+            }
+            onClick={handleClick}
+          >
+            <li className={styles.navItem}>About</li>
+          </Link>
+          <Link
+            href="/projects"
+            className={
+              router.pathname == "/projects"
+                ? `${styles.navLinks} ${styles.active}`
+                : styles.navLinks
+            }
+            onClick={handleClick}
+          >
+            <li className={styles.navItem}>Projects</li>
+          </Link>
+          <Link
+            href="/skills"
+            className={
+              router.pathname == "/skills"
+                ? `${styles.navLinks} ${styles.active}`
+                : styles.navLinks
+            }
+            onClick={handleClick}
+          >
+            <li className={styles.navItem}>Skills</li>
+          </Link>
+          <Link
+            href="/experience"
+            className={
+              router.pathname == "/experience"
+                ? `${styles.navLinks} ${styles.active}`
+                : styles.navLinks
+            }
+            onClick={handleClick}
+          >
+            <li className={styles.navItem}>Experience</li>
+          </Link>
+          <Link
+            href="/contact"
+            className={
+              router.pathname == "/contact"
+                ? `${styles.navLinks} ${styles.active}`
+                : styles.navLinks
+            }
+            onClick={handleClick}
+          >
+            <li className={styles.navItem}>Contact</li>
+          </Link>
         </ul>
         <div className={styles.navIcon} onClick={handleClick}>
           <FontAwesomeIcon

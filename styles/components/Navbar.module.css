@@ -30,7 +30,6 @@
   text-decoration: none;
   font-size: 37px;
   font-family: Poppins;
-  /* flex-grow: 1; */
 }
 
 .navMenu {
@@ -47,6 +46,7 @@
   height: 100%;
   border-bottom: 3px solid transparent;
   font-family: Poppins;
+  line-height: 40px;
 }
 
 .icon {
@@ -54,12 +54,14 @@
 }
 
 .navItem {
-  line-height: 40px;
-  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 8px;
   text-decoration: none;
 }
 
-.navItem:after {
+.navLinks:after {
   content: "";
   display: block;
   height: 3px;
@@ -68,12 +70,12 @@
   transition: width 0.7s ease, background-color 0.5s ease;
 }
 
-.navItem:hover:after {
+.navLinks:hover:after {
   width: 100%;
   background: red;
 }
 
-.navItem:has(.active):after {
+.navLinks.active:has(.navItem):after {
   width: 100%;
   background: red;
 }
@@ -113,25 +115,25 @@
     margin: 0;
   }
 
-  .navItem .active {
+  .navLinks.active {
     color: white;
   }
 
-  .navItem:hover:after {
+  .navLinks:hover:after {
     width: 100%;
   }
 
-  .navItem:has(.active):after {
+  .navLinks.active:has(.navItem):after {
     width: 0%;
     background: transparent;
   }
 
-  .navItem:has(.active):hover:after {
+  .navLinks.active:has(.navItem):hover:after {
     width: 100%;
     background: red;
   }
 
-  .navLinks {
+  .navItem {
     padding: 24px 0;
     width: 100%;
     display: table;

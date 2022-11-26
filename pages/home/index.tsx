@@ -1,6 +1,7 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 import styles from "../../styles/pages/Home.module.css";
 
 export default function Home() {
@@ -43,7 +44,9 @@ export default function Home() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui,
             ullamcorper ut quis congue purus volutpat posuere lorem.
           </p>
-          <button className={styles.hireBtn}>About me</button>
+          <Link href="/about">
+            <button className={styles.hireBtn}>About me</button>
+          </Link>
         </div>
       </div>
     </div>

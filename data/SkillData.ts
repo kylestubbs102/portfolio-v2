@@ -10,25 +10,25 @@ export const SKILLS: Array<BoxData> = [
   {
     title: "Languages",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+      "Kotlin, Java, Javascript/Typescript, HTML/CSS, Python, C++, XML, SQL",
     icon: faEarth,
   },
   {
     title: "Android",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+      "Retrofit, Room, Glide, Compose, XML, Material UI, Coroutines, RxJava, MVVM, Clean Architecture, Firebase, FCM, Gradle, Hilt/Dagger/Koin, Paging3, Mockito, JUnit, Espresso",
     icon: faAndroid,
   },
   {
     title: "Web",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+      "React, Chakra UI, Hooks, Custom Hooks, Next.js, Axios, Routing, Redux, Jest, Socket IO",
     icon: faLaptopCode,
   },
   {
     title: "Tools",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+      "REST, Git, VS Code, Android Studio, Linux, Jira, Postman, Agile Methodologies",
     icon: faTools,
   },
 ];

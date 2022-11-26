@@ -2,33 +2,17 @@ import { BoxData } from "../components/Box";
 
 export const WORK_EXPERIENCE: Array<BoxData> = [
   {
-    title: "UX Designer",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+    title: "Software Engineer @ Amazon",
+    description: "Working on the Android app for Amazon Photos.",
   },
   {
-    title: "Website Design",
+    title: "Software Engineer Intern @ Amazon",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+      "I designed, implemented, and documented a system used in the Android app for Amazon Photos. Utilized coroutines and Retrofit to build interfaces that connect to APIs. Throughly tested system using JUnit and Mockito.",
   },
   {
-    title: "SEO",
+    title: "CS @ UCSB",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
-  },
-  {
-    title: "Digital Marketing",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
-  },
-  {
-    title: "Content Writing",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
-  },
-  {
-    title: "Graphic Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui, ullamcorper ut quis congue purus volutpat posuere lorem. ",
+      "Relevant coursework: Data Structures and Algorithms, Databases, Distributed Systems, Computer Networks, Mobile Development, Machine Learning, Operating Systems, UI/UX Design.",
   },
 ];

@@ -15,7 +15,7 @@ export default function Contact() {
   const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // TODO : send email using form
     // make sure to handle error if fields are empty
@@ -71,7 +71,7 @@ export default function Contact() {
         </div>
         <form
           className={styles.inputContainer}
-          onSubmit={(e) => handleSubmit(e)}
+          onSubmit={e => handleSubmit(e)}
         >
           <input
             className={`${styles.baseInput} ${styles.normalInput}`}

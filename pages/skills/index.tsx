@@ -1,7 +1,7 @@
 import Box from "../../components/Box";
 import Divider from "../../components/Divider";
+import { SKILLS } from "../../data/SkillData";
 import styles from "../../styles/pages/Skills.module.css";
-import { SKILLS } from "./SkillData";
 
 export default function Skills() {
   return (

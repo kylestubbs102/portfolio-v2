@@ -1,7 +1,7 @@
 import Box from "../../components/Box";
 import Divider from "../../components/Divider";
+import { PROJECTS } from "../../data/ProjectData";
 import styles from "../../styles/pages/Projects.module.css";
-import { PROJECTS } from "./ProjectData";
 
 export default function Projects() {
   return (

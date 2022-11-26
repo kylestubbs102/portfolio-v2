@@ -1,7 +1,7 @@
 import Box from "../../components/Box";
 import Divider from "../../components/Divider";
+import { WORK_EXPERIENCE } from "../../data/ExperienceData";
 import styles from "../../styles/pages/Experience.module.css";
-import { WORK_EXPERIENCE } from "./ExperienceData";
 
 export default function Experience() {
   return (

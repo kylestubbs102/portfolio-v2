@@ -1,6 +1,6 @@
-import { BoxData } from "../../components/Box";
+import { BoxData } from "../components/Box";
 
-export const WORK_EXPERIENCE: Array<BoxData> = [
+export const PROJECTS: Array<BoxData> = [
   {
     title: "UX Designer",
     description:

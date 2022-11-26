@@ -4,7 +4,7 @@ import {
   faLaptopCode,
   faTools,
 } from "@fortawesome/free-solid-svg-icons";
-import { BoxData } from "../../components/Box";
+import { BoxData } from "../components/Box";
 
 export const SKILLS: Array<BoxData> = [
   {

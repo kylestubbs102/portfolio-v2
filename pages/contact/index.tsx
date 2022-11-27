@@ -1,9 +1,16 @@
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useRef } from "react";
+import assert from "assert";
+import axios from "axios";
+import React, { useRef } from "react";
 import Divider from "../../components/Divider";
 import styles from "../../styles/pages/Contact.module.css";
+import { EmailData } from "../../types/Email";
+
+type FormRefObject =
+  | React.RefObject<HTMLInputElement>
+  | React.RefObject<HTMLTextAreaElement>;
 
 export default function Contact() {
   const nameRef = useRef<HTMLInputElement>(null);
@@ -11,10 +18,54 @@ export default function Contact() {
   const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function isRefEmpty(ref: FormRefObject): boolean {
+    return ref.current == null || ref.current?.value.trim().length == 0;
+  }
+
+  function getFormDataOrNull(): EmailData | null {
+    if (
+      isRefEmpty(nameRef) ||
+      isRefEmpty(emailRef) ||
+      isRefEmpty(subjectRef) ||
+      isRefEmpty(messageRef)
+    ) {
+      return null;
+    }
+
+    // will never occur, purely for compiler purposes
+    assert(
+      nameRef.current != null &&
+        emailRef.current != null &&
+        subjectRef.current != null &&
+        messageRef.current != null
+    );
+
+    return {
+      name: nameRef.current.value,
+      email: emailRef.current.value,
+      subject: subjectRef.current.value,
+      message: messageRef.current.value,
+    };
+  }
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO : send email using form
-    // make sure to handle error if fields are empty
+
+    let data = getFormDataOrNull();
+    if (data == null) {
+      // TODO : add better way to handle error.
+      alert("Input not valid for form");
+      return;
+    }
+
+    await axios
+      .post("/api/sendgrid", data)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (

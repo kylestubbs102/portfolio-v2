@@ -11,7 +11,7 @@ export default function Layout({ children }: Children) {
     <>
       <Head>
         <title>Kyle Stubbs</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/LogoKS.ico" />
       </Head>
       <Navbar />
       <main>{children}</main>

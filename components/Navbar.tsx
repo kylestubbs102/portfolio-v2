@@ -1,8 +1,10 @@
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import Logo from "../public/LogoKS.png";
 import styles from "../styles/components/Navbar.module.css";
 
 export default function Navbar() {
@@ -15,7 +17,7 @@ export default function Navbar() {
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
         <Link href="/home" className={styles.navLogo} onClick={handleClick}>
-          KS
+          <Image src={Logo} alt="Logo" width={60} height={60} />
         </Link>
 
         <ul

@@ -1,5 +1,5 @@
-import Box from "../../components/Box";
 import Divider from "../../components/Divider";
+import SkillBox from "../../components/SkillBox";
 import { SKILLS } from "../../data/SkillData";
 import styles from "../../styles/pages/Skills.module.css";
 
@@ -12,7 +12,7 @@ export default function Skills() {
       </div>
       <div className={styles.skillsContainer}>
         {SKILLS.map((skill, index) => (
-          <Box key={index} {...skill} width={350} height={350} />
+          <SkillBox key={index} {...skill} />
         ))}
       </div>
     </div>

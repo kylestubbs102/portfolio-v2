@@ -1,6 +1,6 @@
-import { BoxData } from "../components/Box";
+import { ProjectBoxData } from "../components/ProjectBox";
 
-export const PROJECTS: Array<BoxData> = [
+export const PROJECTS: Array<ProjectBoxData> = [
   {
     title: "Pokedex",
     description:

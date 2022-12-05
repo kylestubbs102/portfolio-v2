@@ -1,6 +1,6 @@
-import { BoxData } from "../components/Box";
+import { ExperienceBoxData } from "../components/ExperienceBox";
 
-export const WORK_EXPERIENCE: Array<BoxData> = [
+export const WORK_EXPERIENCE: Array<ExperienceBoxData> = [
   {
     title: "Software Engineer @ Amazon",
     description: "Working on the Android app for Amazon Photos.",

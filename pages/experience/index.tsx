@@ -1,5 +1,5 @@
-import Box from "../../components/Box";
 import Divider from "../../components/Divider";
+import ExperienceBox from "../../components/ExperienceBox";
 import { WORK_EXPERIENCE } from "../../data/ExperienceData";
 import styles from "../../styles/pages/Experience.module.css";
 
@@ -16,7 +16,7 @@ export default function Experience() {
           {WORK_EXPERIENCE.map((experience, index) =>
             index % 2 == 0 ? (
               <>
-                <Box key={index} {...experience} width={451} height={244} />
+                <ExperienceBox key={index} {...experience} />
                 <Circle key={index} index={index} />
                 <div />
               </>
@@ -24,7 +24,7 @@ export default function Experience() {
               <>
                 <div />
                 <Circle key={index} index={index} />
-                <Box key={index} {...experience} width={451} height={244} />
+                <ExperienceBox key={index} {...experience} />
               </>
             )
           )}

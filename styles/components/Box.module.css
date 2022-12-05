@@ -1,6 +1,24 @@
-.box {
+.projectBox {
   width: 350px;
   height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 38px 32px;
+}
+
+.skillBox {
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 38px 32px;
+}
+
+.experienceBox {
+  width: 451px;
+  height: auto;
   background-color: white;
   border-radius: 20px;
   box-sizing: border-box;
@@ -24,14 +42,14 @@
   color: white;
 }
 
-.projectTitle {
+.title {
   font-weight: 700;
   font-size: 25px;
   line-height: 37.5px;
   margin-bottom: 15px;
 }
 
-.projectDescription {
+.description {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;

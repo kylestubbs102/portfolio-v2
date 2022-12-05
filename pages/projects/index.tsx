@@ -1,5 +1,5 @@
-import Box from "../../components/Box";
 import Divider from "../../components/Divider";
+import ProjectBox from "../../components/ProjectBox";
 import { PROJECTS } from "../../data/ProjectData";
 import styles from "../../styles/pages/Projects.module.css";
 
@@ -12,7 +12,7 @@ export default function Projects() {
       </div>
       <div className={styles.projectsContainer}>
         {PROJECTS.map((project, index) => (
-          <Box key={index} {...project} width={350} height={350} />
+          <ProjectBox key={index} {...project} />
         ))}
       </div>
     </div>

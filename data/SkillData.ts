@@ -8,12 +8,6 @@ import { SkillBoxData } from "../components/SkillBox";
 
 export const SKILLS: Array<SkillBoxData> = [
   {
-    title: "Languages",
-    description:
-      "Kotlin, Java, Javascript/Typescript, HTML/CSS, Python, C++, XML, SQL",
-    icon: faEarth,
-  },
-  {
     title: "Android",
     description:
       "Retrofit, Room, Glide, Compose, XML, Material UI, Coroutines, RxJava, MVVM, Clean Architecture, Firebase, FCM, Gradle, Hilt/Dagger/Koin, Paging3, Mockito, JUnit, Espresso",
@@ -24,6 +18,12 @@ export const SKILLS: Array<SkillBoxData> = [
     description:
       "React, Chakra UI, Hooks, Custom Hooks, Next.js, Axios, Routing, Redux, Jest, Socket IO",
     icon: faLaptopCode,
+  },
+  {
+    title: "Languages",
+    description:
+      "Kotlin, Java, Javascript/Typescript, HTML/CSS, Python, C++, XML, SQL",
+    icon: faEarth,
   },
   {
     title: "Tools",

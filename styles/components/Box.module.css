@@ -1,5 +1,4 @@
 .projectBox {
-  width: 350px;
   height: 350px;
   background-color: white;
   border-radius: 20px;
@@ -8,7 +7,6 @@
 }
 
 .skillBox {
-  width: 350px;
   height: 350px;
   background-color: white;
   border-radius: 20px;
@@ -53,4 +51,10 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .skillBox {
+    height: auto;
+  }
 }

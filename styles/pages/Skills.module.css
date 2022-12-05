@@ -18,11 +18,16 @@
 }
 
 .skillsContainer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 350px 350px;
   justify-content: center;
   margin: 0px 87px 75px;
   gap: 31px;
-  max-width: 1200px; /* Make sure max amount of columns is 3 */
+}
+
+@media screen and (max-width: 768px) {
+  .skillsContainer {
+    grid-template-columns: minmax(auto, 350px);
+    margin: 0px 40px 75px;
+  }
 }

@@ -21,12 +21,15 @@ export default function About() {
           <p className={styles.introText}>About me</p>
           <Divider />
           <p className={styles.descriptionText} style={{ marginTop: "37px" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui,
-            ullamcorper ut quis congue purus volutpat posuere lorem.
+            Hello. My name is Kyle and I currently live in Seattle. I recently
+            interned at Amazon, and I decided to move up for a full-time Android
+            developer position. In addition to Android development, I am also
+            very interested in web development.
           </p>
           <p className={styles.descriptionText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui,
-            ullamcorper ut quis congue purus volutpat posuere lorem.
+            When I&apos;m not at my computer, I like to hike, play video games,
+            and solve Rubik&apos;s cubes. I&apos;m also a huge fan of Rocket
+            League eSports and watch almost every game.
           </p>
         </div>
       </div>

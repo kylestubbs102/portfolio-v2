@@ -50,8 +50,13 @@ export default function Home() {
           <p className={styles.nameText}>Kyle Stubbs</p>
           <p className={styles.occupationText}>Software Engineer</p>
           <p className={styles.descriptionText}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Et dui,
-            ullamcorper ut quis congue purus volutpat posuere lorem.
+            I&apos;m an Android developer based in Seattle who enjoys working on
+            all sorts of projects. Currently, I&apos;m working on the Android
+            app for{" "}
+            <a href="http://photos.amazon.com" target="_blank" rel="noreferrer">
+              Amazon Photos
+            </a>
+            .
           </p>
           <Link href="/about">
             <button className={styles.hireBtn}>About me</button>

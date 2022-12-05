@@ -70,15 +70,21 @@
   cursor: pointer;
 }
 
-.linkOuterContainer {
+.contactAndImageContainer {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   min-height: 100vh;
 }
 
-.linkInnerContainer {
+.profileImage {
+  object-fit: cover;
+  border-radius: 2%;
+  margin-right: 42px;
+}
+
+.linkContainer {
   display: flex;
   border: 2px solid red;
   margin-left: 100px;

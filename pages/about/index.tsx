@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Divider from "../../components/Divider";
-import ProfilePic from "../../public/ProfilePicNormal.jpg";
+import ProfilePic from "../../public/ProfilePicAbout.jpg";
 import styles from "../../styles/pages/About.module.css";
 
 export default function About() {
@@ -11,8 +11,8 @@ export default function About() {
           className={styles.profileImage}
           src={ProfilePic}
           alt="Profile pic"
-          width={400}
-          height={500}
+          width={350}
+          height={450}
         />
       </div>
       <div className={styles.diagonalBox} />

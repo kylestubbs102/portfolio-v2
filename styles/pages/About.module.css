@@ -21,7 +21,7 @@
 
 .profileImage {
   object-fit: cover;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 
 .infoContainer {

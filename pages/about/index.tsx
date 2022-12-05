@@ -11,8 +11,8 @@ export default function About() {
           className={styles.profileImage}
           src={ProfilePic}
           alt="Profile pic"
-          width={350}
-          height={450}
+          width={380}
+          height={480}
         />
       </div>
       <div className={styles.diagonalBox} />

@@ -16,12 +16,13 @@
   background-color: black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .profileImage {
   object-fit: cover;
   border-radius: 2%;
+  margin-right: 50px;
 }
 
 .infoContainer {

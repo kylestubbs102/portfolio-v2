@@ -1,9 +1,12 @@
 import Divider from "../../components/Divider";
 import ExperienceBox from "../../components/ExperienceBox";
 import { WORK_EXPERIENCE } from "../../data/ExperienceData";
+import useIsMobile from "../../hooks/useIsMobile";
 import styles from "../../styles/pages/Experience.module.css";
 
 export default function Experience() {
+  const isMobile = useIsMobile();
+
   return (
     <div className={styles.container}>
       <div className={styles.headerContainer}>
@@ -11,26 +14,50 @@ export default function Experience() {
         <Divider />
       </div>
       <div className={styles.infoContainer}>
-        <div className={styles.timelineRope} />
-        <div className={styles.experienceContainer}>
-          {WORK_EXPERIENCE.map((experience, index) =>
-            index % 2 == 0 ? (
-              <>
-                <ExperienceBox key={index} {...experience} />
-                <Circle key={index} index={index} />
-                <div />
-              </>
-            ) : (
-              <>
-                <div />
-                <Circle key={index} index={index} />
-                <ExperienceBox key={index} {...experience} />
-              </>
-            )
-          )}
-        </div>
+        {isMobile ? <MobileLadder /> : <DesktopLadder />}
       </div>
     </div>
+  );
+}
+
+function MobileLadder() {
+  return (
+    <>
+      <div className={styles.timelineRope} />
+      <div className={styles.experienceContainer}>
+        {WORK_EXPERIENCE.map((experience, index) => (
+          <>
+            <Circle key={index} index={index} />
+            <ExperienceBox key={index} {...experience} />
+          </>
+        ))}
+      </div>
+    </>
+  );
+}
+
+function DesktopLadder() {
+  return (
+    <>
+      <div className={styles.timelineRope} />
+      <div className={styles.experienceContainer}>
+        {WORK_EXPERIENCE.map((experience, index) =>
+          index % 2 == 0 ? (
+            <>
+              <ExperienceBox key={index} {...experience} />
+              <Circle key={index} index={index} />
+              <div />
+            </>
+          ) : (
+            <>
+              <div />
+              <Circle key={index} index={index} />
+              <ExperienceBox key={index} {...experience} />
+            </>
+          )
+        )}
+      </div>
+    </>
   );
 }
 

@@ -64,3 +64,19 @@
   font-size: 40px;
   line-height: 75px;
 }
+
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    margin: 0px 20px 75px;
+  }
+
+  .timelineRope {
+    justify-self: start;
+    margin-left: 45px;
+  }
+
+  .experienceContainer {
+    grid-template-columns: 100px auto;
+    column-gap: 20px;
+  }
+}

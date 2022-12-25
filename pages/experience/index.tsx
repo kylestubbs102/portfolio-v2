@@ -1,20 +1,20 @@
 import Divider from "../../components/Divider";
 import ExperienceBox from "../../components/ExperienceBox";
 import { WORK_EXPERIENCE } from "../../data/ExperienceData";
-import useIsMobile from "../../hooks/useIsMobile";
+import useWindowWidth from "../../hooks/useWindowWidth";
 import styles from "../../styles/pages/Experience.module.css";
 
 export default function Experience() {
-  const isMobile = useIsMobile();
+  const windowWidth = useWindowWidth();
 
   return (
     <div className={styles.container}>
       <div className={styles.headerContainer}>
-        <p className={styles.title}>Experience and Qualifications</p>
+        <p className={styles.title}>Experience</p>
         <Divider />
       </div>
       <div className={styles.infoContainer}>
-        {isMobile ? <MobileLadder /> : <DesktopLadder />}
+        {windowWidth <= 768 ? <MobileLadder /> : <DesktopLadder />}
       </div>
     </div>
   );
@@ -46,11 +46,11 @@ function DesktopLadder() {
             <>
               <ExperienceBox key={index} {...experience} />
               <Circle key={index} index={index} />
-              <div />
+              <div key={index} />
             </>
           ) : (
             <>
-              <div />
+              <div key={index} />
               <Circle key={index} index={index} />
               <ExperienceBox key={index} {...experience} />
             </>

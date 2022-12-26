@@ -56,3 +56,57 @@
   max-width: 500px;
   margin-bottom: 40px;
 }
+
+@media screen and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    gap: 70px;
+  }
+
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 50px;
+    margin: 0px 30px;
+  }
+
+  .imageContainer {
+    width: 45%;
+  }
+
+  .profileImage {
+    object-fit: cover;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    margin-right: 0px !important;
+  }
+
+  .infoContainer {
+    width: 45%;
+    min-height: 0px;
+  }
+
+  .container :is(p) {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .infoContainer {
+    width: auto;
+    max-width: 600px;
+    margin: 0px 30px;
+    text-align: center;
+  }
+
+  .imageContainer {
+    width: 80%;
+    max-width: 350px;
+  }
+}

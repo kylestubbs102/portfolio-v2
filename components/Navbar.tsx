@@ -4,19 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import useWindowWidth from "../hooks/useWindowWidth";
 import Logo from "../public/LogoKS.png";
 import styles from "../styles/components/Navbar.module.css";
 
 export default function Navbar() {
   const router = useRouter();
+  const windowWidth = useWindowWidth();
 
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const handleClick = () => {
+    // 960px is when the navbar shows up
+    if (windowWidth <= 960) {
+      setClick(!click);
+    }
+  };
 
   return (
     <nav className={styles.navbar}>
       <div className={styles.navContainer}>
-        <Link href="/home" className={styles.navLogo} onClick={handleClick}>
+        <Link href="/home" className={styles.navLogo}>
           <Image src={Logo} alt="Logo" width={60} height={60} />
         </Link>
 

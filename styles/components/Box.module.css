@@ -1,4 +1,12 @@
 /* Projects */
+.wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  text-decoration: none;
+  color: black;
+}
+
 .projectBox {
   height: 350px;
   background-color: white;

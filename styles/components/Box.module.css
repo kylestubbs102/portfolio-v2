@@ -1,3 +1,4 @@
+/* Projects */
 .projectBox {
   height: 350px;
   background-color: white;
@@ -6,6 +7,7 @@
   padding: 38px 32px;
 }
 
+/* Skills */
 .skillBox {
   height: 350px;
   background-color: white;
@@ -14,6 +16,12 @@
   padding: 38px 32px;
 }
 
+/* Need this because we can't use framer motion on icons */
+.skillBox:hover :is(.icon) {
+  color: red;
+}
+
+/* Experience */
 .experienceBox {
   width: 451px;
   height: auto;
@@ -23,6 +31,7 @@
   padding: 38px 32px;
 }
 
+/* Common */
 .iconBox {
   display: flex;
   align-items: center;

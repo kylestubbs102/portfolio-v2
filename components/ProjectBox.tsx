@@ -1,3 +1,5 @@
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import useWindowWidth from "../hooks/useWindowWidth";
@@ -37,22 +39,43 @@ export default function ProjectBox({ title, description }: ProjectBoxData) {
         transition: { duration: 0.2, ease: "easeOut" },
       },
     };
+  } else {
+    // need these so that when the user makes the screen smaller, the hover is removed so the image is shown
+    infoMotion = {
+      rest: {
+        opacity: 0,
+      },
+    };
+
+    imageMotion = {
+      rest: {
+        opacity: 1,
+      },
+    };
   }
 
   return (
     <motion.a
       initial="rest"
       whileHover="hover"
+      animate="rest"
       className={styles.wrapper}
       href="google.com"
       target="_blank"
     >
+      <motion.div variants={imageMotion}>
+        <Image src={pic} alt={title} fill />
+        <p className={`${styles.title} ${styles.coverTitle}`}>{title}</p>
+        {isMobile && (
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className={styles.coverIcon}
+          />
+        )}
+      </motion.div>
       <motion.div variants={infoMotion} className={styles.projectBox}>
         <p className={styles.title}>{title}</p>
         <p className={styles.description}>{description}</p>
-      </motion.div>
-      <motion.div variants={imageMotion}>
-        <Image src={pic} alt={title} fill />
       </motion.div>
     </motion.a>
   );

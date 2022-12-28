@@ -15,6 +15,21 @@
   padding: 38px 32px;
 }
 
+.coverTitle {
+  position: absolute;
+  color: white;
+  bottom: 0px;
+  left: 32px;
+}
+
+.coverIcon {
+  position: absolute;
+  color: white;
+  bottom: 0px;
+  right: 32px;
+  margin-bottom: 25px;
+}
+
 /* Skills */
 .skillBox {
   height: 350px;

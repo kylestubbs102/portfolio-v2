@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import useWindowWidth from "../hooks/useWindowWidth";
 import styles from "../styles/components/Box.module.css";
 
 export interface ExperienceBoxData {
@@ -6,31 +7,39 @@ export interface ExperienceBoxData {
   description: string;
 }
 
-const boxMotion = {
-  rest: {
-    backgroundColor: "#FFFFFF",
-  },
-  hover: {
-    backgroundColor: "#FF0000",
-    scale: 1.05,
-    transition: { duration: 0.2, ease: "circOut" },
-  },
-};
-
-const textMotion = {
-  rest: {
-    color: "#000000",
-  },
-  hover: {
-    color: "#FFFFFF",
-    transition: { duration: 0.1, ease: "circOut" },
-  },
-};
-
 export default function ExperienceBox({
   title,
   description,
 }: ExperienceBoxData) {
+  const windowWidth = useWindowWidth();
+  const isMobile = windowWidth <= 768;
+
+  let boxMotion = {};
+  let textMotion = {};
+
+  if (!isMobile) {
+    boxMotion = {
+      rest: {
+        backgroundColor: "#FFFFFF",
+      },
+      hover: {
+        backgroundColor: "#FF0000",
+        scale: 1.05,
+        transition: { duration: 0.2, ease: "circOut" },
+      },
+    };
+
+    textMotion = {
+      rest: {
+        color: "#000000",
+      },
+      hover: {
+        color: "#FFFFFF",
+        transition: { duration: 0.1, ease: "circOut" },
+      },
+    };
+  }
+
   return (
     <motion.div
       initial="rest"

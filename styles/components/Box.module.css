@@ -78,4 +78,9 @@
   .experienceBox {
     width: auto;
   }
+
+  /* Make sure this doesn't change on hover with small screens */
+  .skillBox:hover :is(.icon) {
+    color: white;
+  }
 }

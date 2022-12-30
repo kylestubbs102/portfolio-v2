@@ -1,18 +1,23 @@
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import useWindowWidth from "../hooks/useWindowWidth";
-import pic from "../public/ProfilePicAbout.jpg";
 import styles from "../styles/components/Box.module.css";
 
 export interface ProjectBoxData {
   title: string;
   description: string;
+  src: StaticImageData;
+  link: string;
 }
 
-// TODO : fix styling, add links and images
-export default function ProjectBox({ title, description }: ProjectBoxData) {
+export default function ProjectBox({
+  title,
+  description,
+  src,
+  link,
+}: ProjectBoxData) {
   const windowWidth = useWindowWidth();
   const isMobile = windowWidth <= 768;
 
@@ -60,11 +65,12 @@ export default function ProjectBox({ title, description }: ProjectBoxData) {
       whileHover="hover"
       animate="rest"
       className={styles.wrapper}
-      href="google.com"
+      href={link}
       target="_blank"
     >
       <motion.div variants={imageMotion}>
-        <Image src={pic} alt={title} fill />
+        <Image src={src} alt={title} fill style={{ objectFit: "cover" }} />
+        <div className={styles.backgroundGradient}></div>
         <p className={`${styles.title} ${styles.coverTitle}`}>{title}</p>
         {isMobile && (
           <FontAwesomeIcon

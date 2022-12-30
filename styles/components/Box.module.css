@@ -7,6 +7,20 @@
   color: black;
 }
 
+.backgroundGradient {
+  position: absolute;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.4) 40%,
+    rgba(0, 0, 0, 0.7) 75%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  bottom: 0px;
+  height: 100px;
+  width: 100%;
+}
+
 .projectBox {
   height: 350px;
   background-color: white;

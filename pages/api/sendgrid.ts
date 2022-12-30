@@ -25,10 +25,13 @@ export default async function sendEmail(req: Request, res: Response) {
         .catch((e) => console.log(e));
 
       res.status(200);
+      res.end();
     } else {
       res.status(405);
+      res.end();
     }
   } catch (err) {
     res.status(500).json("Error occurred while sending email.");
+    res.end();
   }
 }

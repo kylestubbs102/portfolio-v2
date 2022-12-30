@@ -62,6 +62,8 @@ export default function Contact() {
       .post("/api/sendgrid", data)
       .then((response) => {
         console.log(response);
+        // reset all inputs on success
+        (e.target as HTMLFormElement).reset();
       })
       .catch((err) => {
         console.log(err);

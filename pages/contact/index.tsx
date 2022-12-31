@@ -3,8 +3,9 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import assert from "assert";
 import axios from "axios";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Divider from "../../components/Divider";
+import Toast, { ToastType } from "../../components/Toast";
 import styles from "../../styles/pages/Contact.module.css";
 import { EmailData } from "../../types/Email";
 
@@ -13,10 +14,27 @@ type FormRefObject =
   | React.RefObject<HTMLTextAreaElement>;
 
 export default function Contact() {
+  const [currentToastType, setCurrentToastType] = useState(ToastType.Success);
+  const [toastIsActive, setToastIsActive] = useState(false);
+  const [currentTimeout, setCurrentTimeout] = useState<NodeJS.Timeout>();
+
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const subjectRef = useRef<HTMLInputElement>(null);
   const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  function displayToast(type: ToastType) {
+    setCurrentToastType(type);
+    setToastIsActive(true);
+
+    // make sure to clear timeout so that multiple timeouts 
+    // don't overlap and close the toast early
+    clearTimeout(currentTimeout);
+    var timeout = setTimeout(() => {
+      setToastIsActive(false);
+    }, 5000);
+    setCurrentTimeout(timeout);
+  }
 
   function isRefEmpty(ref: FormRefObject): boolean {
     return ref.current == null || ref.current?.value.trim().length == 0;
@@ -53,8 +71,7 @@ export default function Contact() {
 
     let data = getFormDataOrNull();
     if (data == null) {
-      // TODO : add better way to handle error.
-      alert("Input not valid for form");
+      displayToast(ToastType.Error);
       return;
     }
 
@@ -64,6 +81,7 @@ export default function Contact() {
         console.log(response);
         // reset all inputs on success
         (e.target as HTMLFormElement).reset();
+        displayToast(ToastType.Success);
       })
       .catch((err) => {
         console.log(err);
@@ -72,6 +90,17 @@ export default function Contact() {
 
   return (
     <div className={styles.container}>
+      {/* I put two toasts so that way the animations are smooth when transitioning between the two */}
+      <Toast
+        type={ToastType.Error}
+        isActive={toastIsActive && currentToastType === ToastType.Error}
+        toggleActive={() => setToastIsActive(false)}
+      />
+      <Toast
+        type={ToastType.Success}
+        isActive={toastIsActive && currentToastType === ToastType.Success}
+        toggleActive={() => setToastIsActive(false)}
+      />
       <div className={styles.headerContainer}>
         <p className={styles.title}>Contact</p>
         <Divider />

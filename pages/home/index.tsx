@@ -63,8 +63,8 @@ function DesktopHome() {
           <h3 className={styles.occupationText}>Software Engineer</h3>
           <p className={styles.descriptionText}>
             I&apos;m an Android developer based in Seattle who enjoys working on
-            all sorts of projects. Currently, I&apos;m working on the Android
-            app for{" "}
+            all sorts of projects. Currently, I&apos;m working on the Android,
+            FireTV, and Fire Tablet app for{" "}
             <a href="http://photos.amazon.com" target="_blank" rel="noreferrer">
               Amazon Photos
             </a>
@@ -97,8 +97,8 @@ function LaptopHome() {
       <div className={styles.descriptionContainer}>
         <p className={styles.descriptionText}>
           I&apos;m an Android developer based in Seattle who enjoys working on
-          all sorts of projects. Currently, I&apos;m working on the Android app
-          for{" "}
+          all sorts of projects. Currently, I&apos;m working on the Android,
+          FireTV, and Fire Tablet app for{" "}
           <a href="http://photos.amazon.com" target="_blank" rel="noreferrer">
             Amazon Photos
           </a>
@@ -153,7 +153,8 @@ function MobileHome() {
       <h3 className={styles.occupationText}>Software Engineer</h3>
       <p className={styles.descriptionText}>
         I&apos;m an Android developer based in Seattle who enjoys working on all
-        sorts of projects. Currently, I&apos;m working on the Android app for{" "}
+        sorts of projects. Currently, I&apos;m working on the Android, FireTV,
+        and Fire Tablet apps for{" "}
         <a href="http://photos.amazon.com" target="_blank" rel="noreferrer">
           Amazon Photos
         </a>

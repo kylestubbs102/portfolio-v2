@@ -35,15 +35,20 @@ function DesktopHome() {
           <h1 className={styles.introText}>About me</h1>
           <Divider />
           <p className={styles.descriptionText} style={{ marginTop: "37px" }}>
-            Hello. My name is Kyle and I currently live in Seattle. I recently
-            interned at Amazon, and I decided to move up for a full-time Android
-            developer position. In addition to Android development, I am also
-            very interested in web development.
+            Hello, I&apos;m Kyle, currently residing in the vibrant city of
+            Seattle. I bring a diverse background in software development to the
+            table. My journey began with an internship at Amazon, where I honed
+            my skills and decided to pursue a full-time career as an Android
+            developer. Alongside my Android expertise, I&apos;ve developed a
+            strong passion for web development.
           </p>
           <p className={styles.descriptionText}>
-            When I&apos;m not at my computer, I like to hike, play video games,
-            and solve Rubik&apos;s cubes. I&apos;m also a huge fan of Rocket
-            League eSports and watch almost every game.
+            When I&apos;m not coding away on my computer, you&apos;ll often find
+            me taking a break with the diverse trails this city has to offer,
+            ranging from hikes, runs and bike rides. I love playing video gamess
+            on my PC, as well as speed-solving Rubik&apos;s cubes. Even when
+            I&apos;m not coding I still enjoy practicing my problem-solving
+            skills.
           </p>
         </div>
       </div>
@@ -68,15 +73,20 @@ function LaptopHome() {
         </div>
         <div className={styles.infoContainer}>
           <p className={styles.descriptionText}>
-            Hello. My name is Kyle and I currently live in Seattle. I recently
-            interned at Amazon, and I decided to move up for a full-time Android
-            developer position. In addition to Android development, I am also
-            very interested in web development.
+            Hello, I&apos;m Kyle, currently residing in the vibrant city of
+            Seattle. I bring a diverse background in software development to the
+            table. My journey began with an internship at Amazon, where I honed
+            my skills and decided to pursue a full-time career as an Android
+            developer. Alongside my Android expertise, I&apos;ve developed a
+            strong passion for web development.
           </p>
           <p className={styles.descriptionText}>
-            When I&apos;m not at my computer, I like to hike, play video games,
-            and solve Rubik&apos;s cubes. I&apos;m also a huge fan of Rocket
-            League eSports and watch almost every game.
+            When I&apos;m not coding away on my computer, you&apos;ll often find
+            me taking a break with the diverse trails this city has to offer,
+            ranging from hikes, runs and bike rides. I love playing video gamess
+            on my PC, as well as speed-solving Rubik&apos;s cubes. Even when
+            I&apos;m not coding I still enjoy practicing my problem-solving
+            skills.
           </p>
         </div>
       </div>
@@ -100,15 +110,20 @@ function MobileHome() {
       </div>
       <div className={styles.infoContainer}>
         <p className={styles.descriptionText}>
-          Hello. My name is Kyle and I currently live in Seattle. I recently
-          interned at Amazon, and I decided to move up for a full-time Android
-          developer position. In addition to Android development, I am also very
-          interested in web development.
+          Hello, I&apos;m Kyle, currently residing in the vibrant city of
+          Seattle. I bring a diverse background in software development to the
+          table. My journey began with an internship at Amazon, where I honed my
+          skills and decided to pursue a full-time career as an Android
+          developer. Alongside my Android expertise, I&apos;ve developed a
+          strong passion for web development.
         </p>
         <p className={styles.descriptionText}>
-          When I&apos;m not at my computer, I like to hike, play video games,
-          and solve Rubik&apos;s cubes. I&apos;m also a huge fan of Rocket
-          League eSports and watch almost every game.
+          When I&apos;m not coding away on my computer, you&apos;ll often find
+          me taking a break with the diverse trails this city has to offer,
+          ranging from hikes, runs and bike rides. I love playing video gamess
+          on my PC, as well as speed-solving Rubik&apos;s cubes. Even when
+          I&apos;m not coding I still enjoy practicing my problem-solving
+          skills.
         </p>
       </div>
     </div>

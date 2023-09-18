@@ -3,7 +3,7 @@ import { ExperienceBoxData } from "../components/ExperienceBox";
 export const WORK_EXPERIENCE: Array<ExperienceBoxData> = [
   {
     title: "Software Engineer @ Amazon",
-    description: "Working on the Android app for Amazon Photos.",
+    description: "Working on the Android, FireTV, and Fire Tablet apps for Amazon Photos.",
   },
   {
     title: "Software Engineer Intern @ Amazon",

@@ -10,13 +10,13 @@ export const SKILLS: Array<SkillBoxData> = [
   {
     title: "Android",
     description:
-      "Retrofit, Room, Glide, Compose, XML, Material UI, Coroutines, RxJava, MVVM, Clean Architecture, Firebase, FCM, Gradle, Hilt/Dagger/Koin, Paging3, Mockito, JUnit, Espresso",
+      "Retrofit, Room, Glide, Compose, XML, Material UI, Coroutines, RxJava2, MVVM, Clean Architecture, Firebase, FCM, Gradle, Hilt/Dagger/Koin, Paging3, Mockito, JUnit, Espresso",
     icon: faAndroid,
   },
   {
     title: "Web",
     description:
-      "React, Chakra UI, Hooks, Custom Hooks, Next.js, Axios, Routing, Redux, Jest, Socket IO",
+      "React, Chakra UI, Hooks, Custom Hooks, Next.js, Axios, Routing, Redux, Socket IO",
     icon: faLaptopCode,
   },
   {
